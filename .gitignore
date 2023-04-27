@@ -1,0 +1,10 @@
+# Kernel module build output
+*.ko
+modules.order
+Module.symvers
+*.mod
+*.mod.c
+.*.cmd
+
+# C build output
+*.o
