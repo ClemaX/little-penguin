@@ -8,3 +8,6 @@ Module.symvers
 
 # C build output
 *.o
+
+.cache/
+compile_commands.json
