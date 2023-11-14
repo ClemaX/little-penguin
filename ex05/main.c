@@ -96,7 +96,7 @@ static ssize_t dev_write(struct file *file, const char *data, size_t size,
 	int valid;
 	int error;
 
-	valid = *offset = 0 && size == FT_DEV_CONTENT_LEN;
+	valid = *offset == 0 && size == FT_DEV_CONTENT_LEN;
 
 	if (!valid)
 		goto invalid;
