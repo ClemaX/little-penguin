@@ -96,19 +96,19 @@ static ssize_t dev_write(struct file *file, const char *data, size_t size,
 	int valid;
 	int error;
 
-	valid = size <= FT_DEV_CONTENT_LEN - *offset;
+	valid = *offset = 0 && size == FT_DEV_CONTENT_LEN;
 
 	if (!valid)
 		goto invalid;
 
-	error = copy_from_user(buffer, data, size - *offset);
+	error = copy_from_user(buffer, data, size);
 
 	if (error) {
 		error = -EFAULT;
 		goto error;
 	}
 
-	valid = !memcmp((const char *)FT_DEV_CONTENT + *offset, buffer, size);
+	valid = !memcmp((const char *)FT_DEV_CONTENT, buffer, size);
 
 	if (!valid)
 		goto invalid;
