@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="input", ENV{ID_BUS}=="usb", ENV{ID_INPUT_KEYBOARD}=="1", RUN+="/usr/bin/insmod /home/clemax/Projects/42/linux/little-penguin/ex04/main.ko"
+ACTION=="remove", SUBSYSTEM=="input", ENV{ID_BUS}=="usb", ENV{ID_INPUT_KEYBOARD}=="1", RUN+="/usr/bin/rmmod /home/clemax/Projects/42/linux/little-penguin/ex04/main.ko"
