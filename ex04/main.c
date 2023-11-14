@@ -1,13 +1,13 @@
-#include "asm-generic/errno-base.h"
-#include <linux/device.h>
 #include <linux/fs.h>
+#include <linux/miscdevice.h>
 #include <linux/module.h>
 #include <linux/printk.h>
 
 #define FT_DEV_CLASS "ft"
 #define FT_DEV_NAME "fortytwo"
 #define FT_DEV_CONTENT "chamada"
-#define FT_DEV_MINOR 0
+#define FT_DEV_CONTENT_LEN (sizeof(FT_DEV_CONTENT) - 1)
+#define FT_DEV_MINOR (MISC_DYNAMIC_MINOR)
 
 static int dev_open(struct inode *inode, struct file *file);
 static int dev_release(struct inode *inode, struct file *file);
@@ -15,17 +15,23 @@ static ssize_t dev_read(struct file *file, char *data, size_t size,
 			loff_t *offset);
 static ssize_t dev_write(struct file *file, const char *data, size_t size,
 			 loff_t *offset);
+static loff_t dev_llseek(struct file *file, loff_t offset, int whence);
 
 static struct file_operations file_operations = {
+    .owner = THIS_MODULE,
     .open = dev_open,
     .release = dev_release,
     .read = dev_read,
     .write = dev_write,
+    .llseek = dev_llseek,
 };
 
-static struct class *device_class;
-static struct device *device;
-static int device_major;
+struct miscdevice fortytwo_device = {
+    .minor = FT_DEV_MINOR,
+    .name = FT_DEV_NAME,
+    .fops = &file_operations,
+    .mode = 0666,
+};
 
 static int dev_open(struct inode *inode, struct file *file)
 {
@@ -48,9 +54,18 @@ static ssize_t dev_read(struct file *file, char *data, size_t size,
 			loff_t *offset)
 {
 	int error;
-	size_t copy_length = min(size, sizeof(FT_DEV_CONTENT) - 1);
+	size_t copy_length;
 
-	error = copy_to_user(data, FT_DEV_CONTENT, copy_length);
+	if (*offset < FT_DEV_CONTENT_LEN)
+		copy_length = min(size, FT_DEV_CONTENT_LEN - (size_t)*offset);
+	else
+		copy_length = 0;
+
+	if (copy_length == 0)
+		goto done;
+
+	error = copy_to_user(data, (const char *)FT_DEV_CONTENT + *offset,
+			     copy_length);
 
 	if (error) {
 		pr_err("Failed to copy '" FT_DEV_CONTENT "' to the user!\n");
@@ -59,6 +74,10 @@ static ssize_t dev_read(struct file *file, char *data, size_t size,
 
 	pr_info("Copied '" FT_DEV_CONTENT "' to the user!\n");
 
+	*offset += copy_length;
+
+done:
+
 	return copy_length;
 }
 
@@ -66,29 +85,35 @@ static ssize_t dev_read(struct file *file, char *data, size_t size,
  * Allows writing only "chamada".
  * Returns EINVAL otherwise.
  */
+/*
+ * Allows writing only "chamada".
+ * Returns EINVAL otherwise.
+ */
 static ssize_t dev_write(struct file *file, const char *data, size_t size,
 			 loff_t *offset)
 {
-	char buffer[sizeof(FT_DEV_CONTENT) - 1];
+	char buffer[FT_DEV_CONTENT_LEN];
 	int valid;
 	int error;
 
-	valid = size == sizeof(FT_DEV_CONTENT) - 1;
+	valid = size <= FT_DEV_CONTENT_LEN - *offset;
 
 	if (!valid)
 		goto invalid;
 
-	error = copy_from_user(buffer, data, size);
+	error = copy_from_user(buffer, data, size - *offset);
 
 	if (error) {
 		error = -EFAULT;
 		goto error;
 	}
 
-	valid = !memcmp(FT_DEV_CONTENT, buffer, size);
+	valid = !memcmp((const char *)FT_DEV_CONTENT + *offset, buffer, size);
 
 	if (!valid)
 		goto invalid;
+
+	*offset += size;
 
 	return size;
 
@@ -99,52 +124,48 @@ error:
 	return error;
 }
 
+static loff_t dev_llseek(struct file *file, loff_t offset, int whence)
+{
+	loff_t new_position;
+
+	switch (whence) {
+	case SEEK_SET:
+		new_position = offset;
+
+		break;
+	case SEEK_CUR:
+		new_position = file->f_pos + offset;
+
+		break;
+	case SEEK_END:
+		new_position = FT_DEV_CONTENT_LEN + offset;
+		break;
+
+	default:
+		goto invalid;
+	}
+
+	if (new_position < 0)
+		goto invalid;
+
+	file->f_pos = new_position;
+
+	return new_position;
+
+invalid:
+	return -EINVAL;
+}
+
 static int __init fortytwo_init(void)
 {
-	int error = 0;
+	int error;
 
 	pr_info("Initializing '" FT_DEV_NAME "' device...\n");
 
-	device_major = register_chrdev(0, FT_DEV_NAME, &file_operations);
+	error = misc_register(&fortytwo_device);
 
-	if (device_major < 0) {
-		pr_err("Failed to register major for '" FT_DEV_NAME "'!\n");
-		return device_major;
-	}
-
-	pr_info("Registered '" FT_DEV_NAME "' device with major '%d'!\n",
-		device_major);
-
-	device_class = class_create(FT_DEV_CLASS);
-
-	if (IS_ERR(device_class)) {
-		pr_err("Failed to create device class '" FT_DEV_CLASS "'!\n");
-
-		error = PTR_ERR(device_class);
-		goto out_cleanup_major;
-	}
-
-	pr_info("Created device class '" FT_DEV_CLASS "'!\n");
-
-	device =
-	    device_create(device_class, NULL, MKDEV(device_major, FT_DEV_MINOR),
-			  NULL, FT_DEV_NAME);
-
-	if (IS_ERR(device)) {
-		pr_err("Failed to create '" FT_DEV_NAME "' device!\n");
-
-		error = PTR_ERR(device);
-		goto out_cleanup_class;
-	}
-
-	return 0;
-
-out_cleanup_class:
-	class_unregister(device_class);
-	class_destroy(device_class);
-
-out_cleanup_major:
-	unregister_chrdev(device_major, FT_DEV_NAME);
+	if (error)
+		pr_err("Failed to create '" FT_DEV_NAME "' misc device!\n");
 
 	return error;
 }
@@ -152,12 +173,7 @@ out_cleanup_major:
 void __exit fortytwo_exit(void)
 {
 	pr_info("Tearing down '" FT_DEV_NAME "'...\n");
-	device_destroy(device_class, MKDEV(device_major, FT_DEV_MINOR));
-
-	class_unregister(device_class);
-	class_destroy(device_class);
-
-	unregister_chrdev(device_major, FT_DEV_NAME);
+	misc_deregister(&fortytwo_device);
 }
 
 module_init(fortytwo_init);
