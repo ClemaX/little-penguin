@@ -6,7 +6,7 @@
 /*
  * Mock task that takes some time to complete.
  */
-int do_work(int *my_int, int retval)
+int __exit do_work(int *my_int, int retval)
 {
 	int x;
 	int y = *my_int;
@@ -23,7 +23,7 @@ int do_work(int *my_int, int retval)
 	return z;
 }
 
-int my_init(void)
+int __init my_init(void)
 {
 	int x = 10;
 
