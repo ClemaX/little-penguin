@@ -1,0 +1,26 @@
+From 9d485414f656525b0d2f1bba0d4ad06b5cc8f119 Mon Sep 17 00:00:00 2001
+From: Clement Hamada <clementhamada@protonmai.com>
+Date: Thu, 7 Dec 2023 17:36:13 +0100
+Subject: [PATCH 1/1] version: Append -thor_kernel to EXTRAVERSION
+
+Signed-off-by: Clement Hamada <clementhamada@protonmai.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 724c79beb..2fd1e252f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -2,7 +2,7 @@
+ VERSION = 6
+ PATCHLEVEL = 7
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc2
++EXTRAVERSION = -rc2-thor_kernel
+ NAME = Hurr durr I'ma ninja sloth
+ 
+ # *DOCUMENTATION*
+-- 
+2.34.1
+

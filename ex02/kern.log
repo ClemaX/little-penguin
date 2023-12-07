@@ -1,0 +1,527 @@
+Dec  7 17:34:48 lfs kernel: klogd 1.5.1, log source = /proc/kmsg started.
+Dec  7 17:34:48 lfs kernel: Cannot find map file.
+Dec  7 17:34:48 lfs kernel: Loaded 111445 symbols from 4 modules.
+Dec  7 17:34:48 lfs kernel: [    0.000000] Linux version 6.7.0-rc2-thor_kernel-chamada-gc2d5304e6c64-dirty (root@lfs) (gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.40) #1 SMP PREEMPT_DYNAMIC Thu Dec  7 17:29:58 UTC 2023
+Dec  7 17:34:48 lfs kernel: [    0.000000] Command line: BOOT_IMAGE=/vmlinuz-torvalds-c2d5304e6c648ebcf653bace7e51e0e6742e46c8-thor-chamada root=PARTUUID=ca756fd0-7b3a-457d-ae17-2adfaf39a6c8 ro
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-provided physical RAM map:
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bee8dfff] usable
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bee8e000-0x00000000bef8ffff] reserved
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bef90000-0x00000000bf8edfff] usable
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bf8ee000-0x00000000bf9edfff] reserved
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bf9ee000-0x00000000bfaedfff] type 20
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bfaee000-0x00000000bfb6dfff] reserved
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bfb6e000-0x00000000bfb7dfff] ACPI data
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bfb7e000-0x00000000bfbfdfff] ACPI NVS
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bfbfe000-0x00000000bff7bfff] usable
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000bff7c000-0x00000000bfffffff] reserved
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x00000000ffc00000-0x00000000ffffffff] reserved
+Dec  7 17:34:48 lfs kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+Dec  7 17:34:48 lfs kernel: [    0.000000] NX (Execute Disable) protection: active
+Dec  7 17:34:48 lfs kernel: [    0.000000] APIC: Static calls initialized
+Dec  7 17:34:48 lfs kernel: [    0.000000] efi: EFI v2.7 by EDK II
+Dec  7 17:34:48 lfs kernel: [    0.000000] efi: SMBIOS=0xbf922000 ACPI=0xbfb7d000 ACPI 2.0=0xbfb7d014 MEMATTR=0xbe821018
+Dec  7 17:34:48 lfs kernel: [    0.000000] efi: Remove mem133: MMIO range=[0xffc00000-0xffffffff] (4MB) from e820 map
+Dec  7 17:34:48 lfs kernel: [    0.000000] e820: remove [mem 0xffc00000-0xffffffff] reserved
+Dec  7 17:34:48 lfs kernel: [    0.000000] SMBIOS 2.8 present.
+Dec  7 17:34:48 lfs kernel: [    0.000000] DMI: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 0.0.0 02/06/2015
+Dec  7 17:34:48 lfs kernel: [    0.000000] Hypervisor detected: KVM
+Dec  7 17:34:48 lfs kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+Dec  7 17:34:48 lfs kernel: [    0.000000] kvm-clock: using sched offset of 2411684156330 cycles
+Dec  7 17:34:48 lfs kernel: [    0.000001] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Dec  7 17:34:48 lfs kernel: [    0.000003] tsc: Detected 2112.000 MHz processor
+Dec  7 17:34:48 lfs kernel: [    0.000059] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Dec  7 17:34:48 lfs kernel: [    0.000061] e820: remove [mem 0x000a0000-0x000fffff] usable
+Dec  7 17:34:48 lfs kernel: [    0.000064] last_pfn = 0x140000 max_arch_pfn = 0x400000000
+Dec  7 17:34:48 lfs kernel: [    0.000082] MTRR map: 4 entries (2 fixed + 2 variable; max 18), built from 8 variable MTRRs
+Dec  7 17:34:48 lfs kernel: [    0.000084] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT
+Dec  7 17:34:48 lfs kernel: [    0.000108] last_pfn = 0xbff7c max_arch_pfn = 0x400000000
+Dec  7 17:34:48 lfs kernel: [    0.007606] Using GB pages for direct mapping
+Dec  7 17:34:48 lfs kernel: [    0.007842] Secure boot disabled
+Dec  7 17:34:48 lfs kernel: [    0.007844] ACPI: Early table checksum verification disabled
+Dec  7 17:34:48 lfs kernel: [    0.007846] ACPI: RSDP 0x00000000BFB7D014 000024 (v02 BOCHS )
+Dec  7 17:34:48 lfs kernel: [    0.007848] ACPI: XSDT 0x00000000BFB7C0E8 000044 (v01 BOCHS  BXPC     00000001      01000013)
+Dec  7 17:34:48 lfs kernel: [    0.007851] ACPI: FACP 0x00000000BFB79000 000074 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Dec  7 17:34:48 lfs kernel: [    0.007854] ACPI: DSDT 0x00000000BFB7A000 001765 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Dec  7 17:34:48 lfs kernel: [    0.007859] ACPI: FACS 0x00000000BFBDC000 000040
+Dec  7 17:34:48 lfs kernel: [    0.007861] ACPI: APIC 0x00000000BFB78000 000090 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Dec  7 17:34:48 lfs kernel: [    0.007865] ACPI: WAET 0x00000000BFB77000 000028 (v01 BOCHS  BXPC     00000001 BXPC 00000001)
+Dec  7 17:34:48 lfs kernel: [    0.007867] ACPI: BGRT 0x00000000BFB76000 000038 (v01 INTEL  EDK2     00000002      01000013)
+Dec  7 17:34:48 lfs kernel: [    0.007868] ACPI: Reserving FACP table memory at [mem 0xbfb79000-0xbfb79073]
+Dec  7 17:34:48 lfs kernel: [    0.007869] ACPI: Reserving DSDT table memory at [mem 0xbfb7a000-0xbfb7b764]
+Dec  7 17:34:48 lfs kernel: [    0.007869] ACPI: Reserving FACS table memory at [mem 0xbfbdc000-0xbfbdc03f]
+Dec  7 17:34:48 lfs kernel: [    0.007870] ACPI: Reserving APIC table memory at [mem 0xbfb78000-0xbfb7808f]
+Dec  7 17:34:48 lfs kernel: [    0.007870] ACPI: Reserving WAET table memory at [mem 0xbfb77000-0xbfb77027]
+Dec  7 17:34:48 lfs kernel: [    0.007870] ACPI: Reserving BGRT table memory at [mem 0xbfb76000-0xbfb76037]
+Dec  7 17:34:48 lfs kernel: [    0.007988] No NUMA configuration found
+Dec  7 17:34:48 lfs kernel: [    0.007988] Faking a node at [mem 0x0000000000000000-0x000000013fffffff]
+Dec  7 17:34:48 lfs kernel: [    0.007990] NODE_DATA(0) allocated [mem 0x13fffa000-0x13fffdfff]
+Dec  7 17:34:48 lfs kernel: [    0.008017] Zone ranges:
+Dec  7 17:34:48 lfs kernel: [    0.008017]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Dec  7 17:34:48 lfs kernel: [    0.008018]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Dec  7 17:34:48 lfs kernel: [    0.008019]   Normal   [mem 0x0000000100000000-0x000000013fffffff]
+Dec  7 17:34:48 lfs kernel: [    0.008020] Movable zone start for each node
+Dec  7 17:34:48 lfs kernel: [    0.008020] Early memory node ranges
+Dec  7 17:34:48 lfs kernel: [    0.008020]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+Dec  7 17:34:48 lfs kernel: [    0.008021]   node   0: [mem 0x0000000000100000-0x00000000bee8dfff]
+Dec  7 17:34:48 lfs kernel: [    0.008021]   node   0: [mem 0x00000000bef90000-0x00000000bf8edfff]
+Dec  7 17:34:48 lfs kernel: [    0.008022]   node   0: [mem 0x00000000bfbfe000-0x00000000bff7bfff]
+Dec  7 17:34:48 lfs kernel: [    0.008023]   node   0: [mem 0x0000000100000000-0x000000013fffffff]
+Dec  7 17:34:48 lfs kernel: [    0.008023] Initmem setup node 0 [mem 0x0000000000001000-0x000000013fffffff]
+Dec  7 17:34:48 lfs kernel: [    0.008029] On node 0, zone DMA: 1 pages in unavailable ranges
+Dec  7 17:34:48 lfs kernel: [    0.008097] On node 0, zone DMA: 96 pages in unavailable ranges
+Dec  7 17:34:48 lfs kernel: [    0.022161] On node 0, zone DMA32: 258 pages in unavailable ranges
+Dec  7 17:34:48 lfs kernel: [    0.022188] On node 0, zone DMA32: 784 pages in unavailable ranges
+Dec  7 17:34:48 lfs kernel: [    0.026968] On node 0, zone Normal: 132 pages in unavailable ranges
+Dec  7 17:34:48 lfs kernel: [    0.027214] ACPI: PM-Timer IO Port: 0xb008
+Dec  7 17:34:48 lfs kernel: [    0.027219] ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+Dec  7 17:34:48 lfs kernel: [    0.027241] IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+Dec  7 17:34:48 lfs kernel: [    0.027243] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Dec  7 17:34:48 lfs kernel: [    0.027244] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+Dec  7 17:34:48 lfs kernel: [    0.027245] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Dec  7 17:34:48 lfs kernel: [    0.027246] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+Dec  7 17:34:48 lfs kernel: [    0.027246] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+Dec  7 17:34:48 lfs kernel: [    0.027249] ACPI: Using ACPI (MADT) for SMP configuration information
+Dec  7 17:34:48 lfs kernel: [    0.027249] TSC deadline timer available
+Dec  7 17:34:48 lfs kernel: [    0.027250] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+Dec  7 17:34:48 lfs kernel: [    0.027260] kvm-guest: APIC: eoi() replaced with kvm_guest_apic_eoi_write()
+Dec  7 17:34:48 lfs kernel: [    0.027269] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Dec  7 17:34:48 lfs kernel: [    0.027270] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+Dec  7 17:34:48 lfs kernel: [    0.027271] PM: hibernation: Registered nosave memory: [mem 0xbee8e000-0xbef8ffff]
+Dec  7 17:34:48 lfs kernel: [    0.027272] PM: hibernation: Registered nosave memory: [mem 0xbf8ee000-0xbf9edfff]
+Dec  7 17:34:48 lfs kernel: [    0.027272] PM: hibernation: Registered nosave memory: [mem 0xbf9ee000-0xbfaedfff]
+Dec  7 17:34:48 lfs kernel: [    0.027272] PM: hibernation: Registered nosave memory: [mem 0xbfaee000-0xbfb6dfff]
+Dec  7 17:34:48 lfs kernel: [    0.027273] PM: hibernation: Registered nosave memory: [mem 0xbfb6e000-0xbfb7dfff]
+Dec  7 17:34:48 lfs kernel: [    0.027273] PM: hibernation: Registered nosave memory: [mem 0xbfb7e000-0xbfbfdfff]
+Dec  7 17:34:48 lfs kernel: [    0.027273] PM: hibernation: Registered nosave memory: [mem 0xbff7c000-0xbfffffff]
+Dec  7 17:34:48 lfs kernel: [    0.027274] PM: hibernation: Registered nosave memory: [mem 0xc0000000-0xffffffff]
+Dec  7 17:34:48 lfs kernel: [    0.027275] [mem 0xc0000000-0xffffffff] available for PCI devices
+Dec  7 17:34:48 lfs kernel: [    0.027276] Booting paravirtualized kernel on KVM
+Dec  7 17:34:48 lfs kernel: [    0.027277] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Dec  7 17:34:48 lfs kernel: [    0.030568] setup_percpu: NR_CPUS:64 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+Dec  7 17:34:48 lfs kernel: [    0.031374] percpu: Embedded 55 pages/cpu s184360 r8192 d32728 u524288
+Dec  7 17:34:48 lfs kernel: [    0.031376] pcpu-alloc: s184360 r8192 d32728 u524288 alloc=1*2097152
+Dec  7 17:34:48 lfs kernel: [    0.031378] pcpu-alloc: [0] 0 1 2 3
+Dec  7 17:34:48 lfs kernel: [    0.031389] kvm-guest: PV spinlocks disabled, no host support
+Dec  7 17:34:48 lfs kernel: [    0.031390] Kernel command line: BOOT_IMAGE=/vmlinuz-torvalds-c2d5304e6c648ebcf653bace7e51e0e6742e46c8-thor-chamada root=PARTUUID=ca756fd0-7b3a-457d-ae17-2adfaf39a6c8 ro
+Dec  7 17:34:48 lfs kernel: [    0.031403] Unknown kernel command line parameters "BOOT_IMAGE=/vmlinuz-torvalds-c2d5304e6c648ebcf653bace7e51e0e6742e46c8-thor-chamada", will be passed to user space.
+Dec  7 17:34:48 lfs kernel: [    0.031421] random: crng init done
+Dec  7 17:34:48 lfs kernel: [    0.032567] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.033172] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.033225] Fallback order for Node 0: 0
+Dec  7 17:34:48 lfs kernel: [    0.033227] Built 1 zonelists, mobility grouping on.  Total pages: 1028763
+Dec  7 17:34:48 lfs kernel: [    0.033228] Policy zone: Normal
+Dec  7 17:34:48 lfs kernel: [    0.033229] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+Dec  7 17:34:48 lfs kernel: [    0.033231] software IO TLB: area num 4.
+Dec  7 17:34:48 lfs kernel: [    0.066636] Memory: 3976652K/4189220K available (16384K kernel code, 2714K rwdata, 4964K rodata, 2684K init, 1868K bss, 212308K reserved, 0K cma-reserved)
+Dec  7 17:34:48 lfs kernel: [    0.066662] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Dec  7 17:34:48 lfs kernel: [    0.067502] Dynamic Preempt: voluntary
+Dec  7 17:34:48 lfs kernel: [    0.067537] rcu: Preemptible hierarchical RCU implementation.
+Dec  7 17:34:48 lfs kernel: [    0.067538] rcu: ^IRCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+Dec  7 17:34:48 lfs kernel: [    0.067538] ^ITrampoline variant of Tasks RCU enabled.
+Dec  7 17:34:48 lfs kernel: [    0.067539] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Dec  7 17:34:48 lfs kernel: [    0.067539] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Dec  7 17:34:48 lfs kernel: [    0.068388] NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+Dec  7 17:34:48 lfs kernel: [    0.068564] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Dec  7 17:34:48 lfs kernel: [    0.068599] Console: colour dummy device 80x25
+Dec  7 17:34:48 lfs kernel: [    0.068600] printk: legacy console [tty0] enabled
+Dec  7 17:34:48 lfs kernel: [    0.068696] ACPI: Core revision 20230628
+Dec  7 17:34:48 lfs kernel: [    0.068719] APIC: Switch to symmetric I/O mode setup
+Dec  7 17:34:48 lfs kernel: [    0.069208] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e71785e5dd, max_idle_ns: 440795244814 ns
+Dec  7 17:34:48 lfs kernel: [    0.069214] Calibrating delay loop (skipped) preset value.. 4224.00 BogoMIPS (lpj=2112000)
+Dec  7 17:34:48 lfs kernel: [    0.069280] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+Dec  7 17:34:48 lfs kernel: [    0.069322] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+Dec  7 17:34:48 lfs kernel: [    0.069324] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+Dec  7 17:34:48 lfs kernel: [    0.069327] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Dec  7 17:34:48 lfs kernel: [    0.069330] Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+Dec  7 17:34:48 lfs kernel: [    0.069331] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Dec  7 17:34:48 lfs kernel: [    0.069332] Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+Dec  7 17:34:48 lfs kernel: [    0.069333] RETBleed: Mitigation: Enhanced IBRS
+Dec  7 17:34:48 lfs kernel: [    0.069335] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+Dec  7 17:34:48 lfs kernel: [    0.069336] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+Dec  7 17:34:48 lfs kernel: [    0.069342] MMIO Stale Data: Vulnerable: Clear CPU buffers attempted, no microcode
+Dec  7 17:34:48 lfs kernel: [    0.069344] GDS: Unknown: Dependent on hypervisor status
+Dec  7 17:34:48 lfs kernel: [    0.069357] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Dec  7 17:34:48 lfs kernel: [    0.069359] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Dec  7 17:34:48 lfs kernel: [    0.069360] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Dec  7 17:34:48 lfs kernel: [    0.069361] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+Dec  7 17:34:48 lfs kernel: [    0.069362] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Dec  7 17:34:48 lfs kernel: [    0.069364] x86/fpu: xstate_offset[9]:  832, xstate_sizes[9]:    8
+Dec  7 17:34:48 lfs kernel: [    0.069365] x86/fpu: Enabled xstate features 0x207, context size is 840 bytes, using 'compacted' format.
+Dec  7 17:34:48 lfs kernel: [    0.070212] Freeing SMP alternatives memory: 44K
+Dec  7 17:34:48 lfs kernel: [    0.070212] pid_max: default: 32768 minimum: 301
+Dec  7 17:34:48 lfs kernel: [    0.070212] LSM: initializing lsm=capability,selinux,integrity
+Dec  7 17:34:48 lfs kernel: [    0.070212] SELinux:  Initializing.
+Dec  7 17:34:48 lfs kernel: [    0.070212] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.070212] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.070212] smpboot: CPU0: Intel Xeon Processor (Cooperlake) (family: 0x6, model: 0x55, stepping: 0xa)
+Dec  7 17:34:48 lfs kernel: [    0.070212] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1.
+Dec  7 17:34:48 lfs kernel: [    0.070212] Performance Events: unsupported p6 CPU model 85 no PMU driver, software events only.
+Dec  7 17:34:48 lfs kernel: [    0.070212] signal: max sigframe size: 3232
+Dec  7 17:34:48 lfs kernel: [    0.070212] rcu: Hierarchical SRCU implementation.
+Dec  7 17:34:48 lfs kernel: [    0.070212] rcu: ^IMax phase no-delay instances is 400.
+Dec  7 17:34:48 lfs kernel: [    0.070212] smp: Bringing up secondary CPUs ...
+Dec  7 17:34:48 lfs kernel: [    0.070212] smpboot: x86: Booting SMP configuration:
+Dec  7 17:34:48 lfs kernel: [    0.070212] .... node  #0, CPUs:      #1 #2 #3
+Dec  7 17:34:48 lfs kernel: [    0.001643] smpboot: CPU 1 Converting physical 0 to logical die 1
+Dec  7 17:34:48 lfs kernel: [    0.001643] smpboot: CPU 2 Converting physical 0 to logical die 2
+Dec  7 17:34:48 lfs kernel: [    0.001643] smpboot: CPU 3 Converting physical 0 to logical die 3
+Dec  7 17:34:48 lfs kernel: [    0.073430] smp: Brought up 1 node, 4 CPUs
+Dec  7 17:34:48 lfs kernel: [    0.073433] smpboot: Max logical packages: 4
+Dec  7 17:34:48 lfs kernel: [    0.073434] smpboot: Total of 4 processors activated (16896.00 BogoMIPS)
+Dec  7 17:34:48 lfs kernel: [    0.073620] devtmpfs: initialized
+Dec  7 17:34:48 lfs kernel: [    0.074217] ACPI: PM: Registering ACPI NVS region [mem 0xbfb7e000-0xbfbfdfff] (524288 bytes)
+Dec  7 17:34:48 lfs kernel: [    0.074249] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Dec  7 17:34:48 lfs kernel: [    0.074252] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.074321] PM: RTC time: 17:34:44, date: 2023-12-07
+Dec  7 17:34:48 lfs kernel: [    0.074443] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Dec  7 17:34:48 lfs kernel: [    0.074493] audit: initializing netlink subsys (disabled)
+Dec  7 17:34:48 lfs kernel: [    0.074513] audit: type=2000 audit(1701970485.113:1): state=initialized audit_enabled=0 res=1
+Dec  7 17:34:48 lfs kernel: [    0.074513] thermal_sys: Registered thermal governor 'step_wise'
+Dec  7 17:34:48 lfs kernel: [    0.074513] thermal_sys: Registered thermal governor 'user_space'
+Dec  7 17:34:48 lfs kernel: [    0.074513] cpuidle: using governor menu
+Dec  7 17:34:48 lfs kernel: [    0.074513] PCI: Using configuration type 1 for base access
+Dec  7 17:34:48 lfs kernel: [    0.074513] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Dec  7 17:34:48 lfs kernel: [    0.083455] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Dec  7 17:34:48 lfs kernel: [    0.083457] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Dec  7 17:34:48 lfs kernel: [    0.083544] ACPI: Added _OSI(Module Device)
+Dec  7 17:34:48 lfs kernel: [    0.083545] ACPI: Added _OSI(Processor Device)
+Dec  7 17:34:48 lfs kernel: [    0.083546] ACPI: Added _OSI(3.0 _SCP Extensions)
+Dec  7 17:34:48 lfs kernel: [    0.083547] ACPI: Added _OSI(Processor Aggregator Device)
+Dec  7 17:34:48 lfs kernel: [    0.083727] ACPI: 1 ACPI AML tables successfully acquired and loaded
+Dec  7 17:34:48 lfs kernel: [    0.086076] ACPI: _OSC evaluation for CPUs failed, trying _PDC
+Dec  7 17:34:48 lfs kernel: [    0.086116] ACPI: Interpreter enabled
+Dec  7 17:34:48 lfs kernel: [    0.086120] ACPI: PM: (supports S0 S5)
+Dec  7 17:34:48 lfs kernel: [    0.086121] ACPI: Using IOAPIC for interrupt routing
+Dec  7 17:34:48 lfs kernel: [    0.086126] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Dec  7 17:34:48 lfs kernel: [    0.086128] PCI: Using E820 reservations for host bridge windows
+Dec  7 17:34:48 lfs kernel: [    0.086158] ACPI: Enabled 2 GPEs in block 00 to 0F
+Dec  7 17:34:48 lfs kernel: [    0.086971] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Dec  7 17:34:48 lfs kernel: [    0.086975] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+Dec  7 17:34:48 lfs kernel: [    0.086976] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Dec  7 17:34:48 lfs kernel: [    0.086980] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended configuration space under this bridge
+Dec  7 17:34:48 lfs kernel: [    0.087090] PCI host bridge to bus 0000:00
+Dec  7 17:34:48 lfs kernel: [    0.087092] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Dec  7 17:34:48 lfs kernel: [    0.087093] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Dec  7 17:34:48 lfs kernel: [    0.087094] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Dec  7 17:34:48 lfs kernel: [    0.087096] pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+Dec  7 17:34:48 lfs kernel: [    0.087097] pci_bus 0000:00: root bus resource [mem 0x800000000-0x87fffffff window]
+Dec  7 17:34:48 lfs kernel: [    0.087098] pci_bus 0000:00: root bus resource [bus 00-ff]
+Dec  7 17:34:48 lfs kernel: [    0.087119] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Dec  7 17:34:48 lfs kernel: [    0.087412] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Dec  7 17:34:48 lfs kernel: [    0.087669] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+Dec  7 17:34:48 lfs kernel: [    0.088512] pci 0000:00:01.1: reg 0x20: [io  0xc180-0xc18f]
+Dec  7 17:34:48 lfs kernel: [    0.088826] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Dec  7 17:34:48 lfs kernel: [    0.088828] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Dec  7 17:34:48 lfs kernel: [    0.088829] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Dec  7 17:34:48 lfs kernel: [    0.088830] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Dec  7 17:34:48 lfs kernel: [    0.088908] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+Dec  7 17:34:48 lfs kernel: [    0.089100] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+Dec  7 17:34:48 lfs kernel: [    0.089105] pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+Dec  7 17:34:48 lfs kernel: [    0.089189] pci 0000:00:02.0: [1b36:0100] type 00 class 0x030000
+Dec  7 17:34:48 lfs kernel: [    0.090721] pci 0000:00:02.0: reg 0x10: [mem 0xc4000000-0xc7ffffff]
+Dec  7 17:34:48 lfs kernel: [    0.091638] pci 0000:00:02.0: reg 0x14: [mem 0xc0000000-0xc3ffffff]
+Dec  7 17:34:48 lfs kernel: [    0.092258] pci 0000:00:02.0: reg 0x18: [mem 0xc80a4000-0xc80a5fff]
+Dec  7 17:34:48 lfs kernel: [    0.093261] pci 0000:00:02.0: reg 0x1c: [io  0xc160-0xc17f]
+Dec  7 17:34:48 lfs kernel: [    0.096255] pci 0000:00:02.0: reg 0x30: [mem 0xffff0000-0xffffffff pref]
+Dec  7 17:34:48 lfs kernel: [    0.105677] pci 0000:00:02.0: BAR 0: assigned to efifb
+Dec  7 17:34:48 lfs kernel: [    0.105697] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Dec  7 17:34:48 lfs kernel: [    0.106091] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Dec  7 17:34:48 lfs kernel: [    0.106344] pci 0000:00:03.0: reg 0x10: [mem 0xc8080000-0xc809ffff]
+Dec  7 17:34:48 lfs kernel: [    0.106610] pci 0000:00:03.0: reg 0x14: [io  0xc0c0-0xc0ff]
+Dec  7 17:34:48 lfs kernel: [    0.107774] pci 0000:00:03.0: reg 0x30: [mem 0xfff80000-0xffffffff pref]
+Dec  7 17:34:48 lfs kernel: [    0.109578] pci 0000:00:04.0: [8086:2668] type 00 class 0x040300
+Dec  7 17:34:48 lfs kernel: [    0.109746] pci 0000:00:04.0: reg 0x10: [mem 0xc80a0000-0xc80a3fff]
+Dec  7 17:34:48 lfs kernel: [    0.110929] pci 0000:00:05.0: [8086:2934] type 00 class 0x0c0300
+Dec  7 17:34:48 lfs kernel: [    0.111744] pci 0000:00:05.0: reg 0x20: [io  0xc140-0xc15f]
+Dec  7 17:34:48 lfs kernel: [    0.112247] pci 0000:00:05.1: [8086:2935] type 00 class 0x0c0300
+Dec  7 17:34:48 lfs kernel: [    0.113167] pci 0000:00:05.1: reg 0x20: [io  0xc120-0xc13f]
+Dec  7 17:34:48 lfs kernel: [    0.114506] pci 0000:00:05.2: [8086:2936] type 00 class 0x0c0300
+Dec  7 17:34:48 lfs kernel: [    0.115130] pci 0000:00:05.2: reg 0x20: [io  0xc100-0xc11f]
+Dec  7 17:34:48 lfs kernel: [    0.115419] pci 0000:00:05.7: [8086:293a] type 00 class 0x0c0320
+Dec  7 17:34:48 lfs kernel: [    0.115568] pci 0000:00:05.7: reg 0x10: [mem 0xc80a8000-0xc80a8fff]
+Dec  7 17:34:48 lfs kernel: [    0.116410] pci 0000:00:06.0: [1af4:1003] type 00 class 0x078000
+Dec  7 17:34:48 lfs kernel: [    0.116856] pci 0000:00:06.0: reg 0x10: [io  0xc080-0xc0bf]
+Dec  7 17:34:48 lfs kernel: [    0.117213] pci 0000:00:06.0: reg 0x14: [mem 0xc80a7000-0xc80a7fff]
+Dec  7 17:34:48 lfs kernel: [    0.118444] pci 0000:00:06.0: reg 0x20: [mem 0x800000000-0x800003fff 64bit pref]
+Dec  7 17:34:48 lfs kernel: [    0.119268] pci 0000:00:07.0: [1af4:1002] type 00 class 0x00ff00
+Dec  7 17:34:48 lfs kernel: [    0.119590] pci 0000:00:07.0: reg 0x10: [io  0xc040-0xc07f]
+Dec  7 17:34:48 lfs kernel: [    0.120814] pci 0000:00:07.0: reg 0x20: [mem 0x800004000-0x800007fff 64bit pref]
+Dec  7 17:34:48 lfs kernel: [    0.121480] pci 0000:00:08.0: [1af4:1009] type 00 class 0x000200
+Dec  7 17:34:48 lfs kernel: [    0.121931] pci 0000:00:08.0: reg 0x10: [io  0xc000-0xc03f]
+Dec  7 17:34:48 lfs kernel: [    0.122213] pci 0000:00:08.0: reg 0x14: [mem 0xc80a6000-0xc80a6fff]
+Dec  7 17:34:48 lfs kernel: [    0.123445] pci 0000:00:08.0: reg 0x20: [mem 0x800008000-0x80000bfff 64bit pref]
+Dec  7 17:34:48 lfs kernel: [    0.126746] ACPI: PCI: Interrupt link LNKA configured for IRQ 10
+Dec  7 17:34:48 lfs kernel: [    0.126784] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Dec  7 17:34:48 lfs kernel: [    0.126816] ACPI: PCI: Interrupt link LNKC configured for IRQ 11
+Dec  7 17:34:48 lfs kernel: [    0.126846] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Dec  7 17:34:48 lfs kernel: [    0.126864] ACPI: PCI: Interrupt link LNKS configured for IRQ 9
+Dec  7 17:34:48 lfs kernel: [    0.127087] iommu: Default domain type: Translated
+Dec  7 17:34:48 lfs kernel: [    0.127091] iommu: DMA domain TLB invalidation policy: lazy mode
+Dec  7 17:34:48 lfs kernel: [    0.159920] SCSI subsystem initialized
+Dec  7 17:34:48 lfs kernel: [    0.160322] libata version 3.00 loaded.
+Dec  7 17:34:48 lfs kernel: [    0.160322] ACPI: bus type USB registered
+Dec  7 17:34:48 lfs kernel: [    0.160322] usbcore: registered new interface driver usbfs
+Dec  7 17:34:48 lfs kernel: [    0.160322] usbcore: registered new interface driver hub
+Dec  7 17:34:48 lfs kernel: [    0.160322] usbcore: registered new device driver usb
+Dec  7 17:34:48 lfs kernel: [    0.160322] pps_core: LinuxPPS API ver. 1 registered
+Dec  7 17:34:48 lfs kernel: [    0.160322] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Dec  7 17:34:48 lfs kernel: [    0.160322] PTP clock support registered
+Dec  7 17:34:48 lfs kernel: [    0.190635] EDAC MC: Ver: 3.0.0
+Dec  7 17:34:48 lfs kernel: [    0.190635] efivars: Registered efivars operations
+Dec  7 17:34:48 lfs kernel: [    0.190635] Advanced Linux Sound Architecture Driver Initialized.
+Dec  7 17:34:48 lfs kernel: [    0.190765] NetLabel: Initializing
+Dec  7 17:34:48 lfs kernel: [    0.190766] NetLabel:  domain hash size = 128
+Dec  7 17:34:48 lfs kernel: [    0.190768] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Dec  7 17:34:48 lfs kernel: [    0.190781] NetLabel:  unlabeled traffic allowed by default
+Dec  7 17:34:48 lfs kernel: [    0.191272] PCI: Using ACPI for IRQ routing
+Dec  7 17:34:48 lfs kernel: [    0.191272] PCI: pci_cache_line_size set to 64 bytes
+Dec  7 17:34:48 lfs kernel: [    0.191272] e820: reserve RAM buffer [mem 0xbee8e000-0xbfffffff]
+Dec  7 17:34:48 lfs kernel: [    0.191272] e820: reserve RAM buffer [mem 0xbf8ee000-0xbfffffff]
+Dec  7 17:34:48 lfs kernel: [    0.191272] e820: reserve RAM buffer [mem 0xbff7c000-0xbfffffff]
+Dec  7 17:34:48 lfs kernel: [    0.191301] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Dec  7 17:34:48 lfs kernel: [    0.191303] pci 0000:00:02.0: vgaarb: bridge control possible
+Dec  7 17:34:48 lfs kernel: [    0.191304] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Dec  7 17:34:48 lfs kernel: [    0.191307] vgaarb: loaded
+Dec  7 17:34:48 lfs kernel: [    0.191468] clocksource: Switched to clocksource kvm-clock
+Dec  7 17:34:48 lfs kernel: [    0.191593] VFS: Disk quotas dquot_6.6.0
+Dec  7 17:34:48 lfs kernel: [    0.191600] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Dec  7 17:34:48 lfs kernel: [    0.191640] pnp: PnP ACPI init
+Dec  7 17:34:48 lfs kernel: [    0.191690] pnp 00:03: [dma 2]
+Dec  7 17:34:48 lfs kernel: [    0.192099] pnp: PnP ACPI: found 5 devices
+Dec  7 17:34:48 lfs kernel: [    0.199358] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Dec  7 17:34:48 lfs kernel: [    0.199378] NET: Registered PF_INET protocol family
+Dec  7 17:34:48 lfs kernel: [    0.199574] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.199976] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.199995] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.199997] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.200082] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.200425] TCP: Hash tables configured (established 32768 bind 32768)
+Dec  7 17:34:48 lfs kernel: [    0.201842] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.202215] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Dec  7 17:34:48 lfs kernel: [    0.202261] NET: Registered PF_UNIX/PF_LOCAL protocol family
+Dec  7 17:34:48 lfs kernel: [    0.202424] RPC: Registered named UNIX socket transport module.
+Dec  7 17:34:48 lfs kernel: [    0.202426] RPC: Registered udp transport module.
+Dec  7 17:34:48 lfs kernel: [    0.202426] RPC: Registered tcp transport module.
+Dec  7 17:34:48 lfs kernel: [    0.202427] RPC: Registered tcp-with-tls transport module.
+Dec  7 17:34:48 lfs kernel: [    0.202428] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Dec  7 17:34:48 lfs kernel: [    0.202613] pci 0000:00:03.0: can't claim BAR 6 [mem 0xfff80000-0xffffffff pref]: no compatible bridge window
+Dec  7 17:34:48 lfs kernel: [    0.202620] pci 0000:00:03.0: BAR 6: assigned [mem 0xc8000000-0xc807ffff pref]
+Dec  7 17:34:48 lfs kernel: [    0.202623] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Dec  7 17:34:48 lfs kernel: [    0.202625] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Dec  7 17:34:48 lfs kernel: [    0.202626] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Dec  7 17:34:48 lfs kernel: [    0.202627] pci_bus 0000:00: resource 7 [mem 0xc0000000-0xfebfffff window]
+Dec  7 17:34:48 lfs kernel: [    0.202628] pci_bus 0000:00: resource 8 [mem 0x800000000-0x87fffffff window]
+Dec  7 17:34:48 lfs kernel: [    0.202655] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+Dec  7 17:34:48 lfs kernel: [    0.202662] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Dec  7 17:34:48 lfs kernel: [    0.209527] ACPI: \_SB_.LNKA: Enabled at IRQ 10
+Dec  7 17:34:48 lfs kernel: [    0.216386] pci 0000:00:05.0: quirk_usb_early_handoff+0x0/0x7c0 took 13370 usecs
+Dec  7 17:34:48 lfs kernel: [    0.223168] ACPI: \_SB_.LNKB: Enabled at IRQ 11
+Dec  7 17:34:48 lfs kernel: [    0.229977] pci 0000:00:05.1: quirk_usb_early_handoff+0x0/0x7c0 took 13249 usecs
+Dec  7 17:34:48 lfs kernel: [    0.236604] ACPI: \_SB_.LNKC: Enabled at IRQ 11
+Dec  7 17:34:48 lfs kernel: [    0.243231] pci 0000:00:05.2: quirk_usb_early_handoff+0x0/0x7c0 took 12935 usecs
+Dec  7 17:34:48 lfs kernel: [    0.249745] ACPI: \_SB_.LNKD: Enabled at IRQ 10
+Dec  7 17:34:48 lfs kernel: [    0.256325] pci 0000:00:05.7: quirk_usb_early_handoff+0x0/0x7c0 took 12778 usecs
+Dec  7 17:34:48 lfs kernel: [    0.256342] PCI: CLS 0 bytes, default 64
+Dec  7 17:34:48 lfs kernel: [    0.256349] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Dec  7 17:34:48 lfs kernel: [    0.256350] software IO TLB: mapped [mem 0x00000000b7fbe000-0x00000000bbfbe000] (64MB)
+Dec  7 17:34:48 lfs kernel: [    0.256704] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Dec  7 17:34:48 lfs kernel: [    0.256724] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e71785e5dd, max_idle_ns: 440795244814 ns
+Dec  7 17:34:48 lfs kernel: [    0.257144] kworker/u9:0 (58) used greatest stack depth: 14544 bytes left
+Dec  7 17:34:48 lfs kernel: [    0.257147] kworker/u12:0 (57) used greatest stack depth: 14064 bytes left
+Dec  7 17:34:48 lfs kernel: [    0.258833] Initialise system trusted keyrings
+Dec  7 17:34:48 lfs kernel: [    0.259356] workingset: timestamp_bits=56 max_order=20 bucket_order=0
+Dec  7 17:34:48 lfs kernel: [    0.259669] NFS: Registering the id_resolver key type
+Dec  7 17:34:48 lfs kernel: [    0.259672] Key type id_resolver registered
+Dec  7 17:34:48 lfs kernel: [    0.259673] Key type id_legacy registered
+Dec  7 17:34:48 lfs kernel: [    0.259762] fuse: init (API version 7.39)
+Dec  7 17:34:48 lfs kernel: [    0.264539] Key type asymmetric registered
+Dec  7 17:34:48 lfs kernel: [    0.264541] Asymmetric key parser 'x509' registered
+Dec  7 17:34:48 lfs kernel: [    0.264552] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+Dec  7 17:34:48 lfs kernel: [    0.264556] io scheduler mq-deadline registered
+Dec  7 17:34:48 lfs kernel: [    0.264557] io scheduler kyber registered
+Dec  7 17:34:48 lfs kernel: [    0.264724] efifb: probing for efifb
+Dec  7 17:34:48 lfs kernel: [    0.264733] efifb: framebuffer at 0xc4000000, using 4032k, total 4032k
+Dec  7 17:34:48 lfs kernel: [    0.264734] efifb: mode is 1280x800x32, linelength=5120, pages=1
+Dec  7 17:34:48 lfs kernel: [    0.264736] efifb: scrolling: redraw
+Dec  7 17:34:48 lfs kernel: [    0.264736] efifb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Dec  7 17:34:48 lfs kernel: [    0.267002] Console: switching to colour frame buffer device 160x50
+Dec  7 17:34:48 lfs kernel: [    0.267321] fb0: EFI VGA frame buffer device
+Dec  7 17:34:48 lfs kernel: [    0.267448] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Dec  7 17:34:48 lfs kernel: [    0.267538] ACPI: button: Power Button [PWRF]
+Dec  7 17:34:48 lfs kernel: [    0.267843] EINJ: EINJ table not found.
+Dec  7 17:34:48 lfs kernel: [    0.290532] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Dec  7 17:34:48 lfs kernel: [    0.291281] 00:00: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+Dec  7 17:34:48 lfs kernel: [    0.296425] Non-volatile memory driver v1.3
+Dec  7 17:34:48 lfs kernel: [    0.296453] Linux agpgart interface v0.103
+Dec  7 17:34:48 lfs kernel: [    0.296531] ACPI: bus type drm_connector registered
+Dec  7 17:34:48 lfs kernel: [    0.298552] loop: module loaded
+Dec  7 17:34:48 lfs kernel: [    0.298784] ata_piix 0000:00:01.1: version 2.13
+Dec  7 17:34:48 lfs kernel: [    0.299110] scsi host0: ata_piix
+Dec  7 17:34:48 lfs kernel: [    0.299218] scsi host1: ata_piix
+Dec  7 17:34:48 lfs kernel: [    0.299252] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc180 irq 14 lpm-pol 0
+Dec  7 17:34:48 lfs kernel: [    0.299274] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc188 irq 15 lpm-pol 0
+Dec  7 17:34:48 lfs kernel: [    0.299329] wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+Dec  7 17:34:48 lfs kernel: [    0.299351] wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+Dec  7 17:34:48 lfs kernel: [    0.299457] e100: Intel(R) PRO/100 Network Driver
+Dec  7 17:34:48 lfs kernel: [    0.299478] e100: Copyright(c) 1999-2006 Intel Corporation
+Dec  7 17:34:48 lfs kernel: [    0.299502] e1000: Intel(R) PRO/1000 Network Driver
+Dec  7 17:34:48 lfs kernel: [    0.299525] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Dec  7 17:34:48 lfs kernel: [    0.454080] ata1: found unknown device (class 0)
+Dec  7 17:34:48 lfs kernel: [    0.455274] ata1.00: ATA-7: QEMU HARDDISK, 2.5+, max UDMA/100
+Dec  7 17:34:48 lfs kernel: [    0.455398] ata1.00: 33554432 sectors, multi 16: LBA48
+Dec  7 17:34:48 lfs kernel: [    0.455911] scsi 0:0:0:0: Direct-Access     ATA      QEMU HARDDISK    2.5+ PQ: 0 ANSI: 5
+Dec  7 17:34:48 lfs kernel: [    0.456249] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Dec  7 17:34:48 lfs kernel: [    0.456422] sd 0:0:0:0: [sda] 33554432 512-byte logical blocks: (17.2 GB/16.0 GiB)
+Dec  7 17:34:48 lfs kernel: [    0.456562] sd 0:0:0:0: [sda] Write Protect is off
+Dec  7 17:34:48 lfs kernel: [    0.456699] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Dec  7 17:34:48 lfs kernel: [    0.456704] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Dec  7 17:34:48 lfs kernel: [    0.456823] sd 0:0:0:0: [sda] Preferred minimum I/O size 512 bytes
+Dec  7 17:34:48 lfs kernel: [    0.459433]  sda: sda1 sda2 sda3
+Dec  7 17:34:48 lfs kernel: [    0.459636] sd 0:0:0:0: [sda] Attached SCSI disk
+Dec  7 17:34:48 lfs kernel: [    0.600461] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 52:54:00:51:9e:06
+Dec  7 17:34:48 lfs kernel: [    0.601327] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Dec  7 17:34:48 lfs kernel: [    0.601486] e1000e: Intel(R) PRO/1000 Network Driver
+Dec  7 17:34:48 lfs kernel: [    0.601649] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Dec  7 17:34:48 lfs kernel: [    0.601926] sky2: driver version 1.30
+Dec  7 17:34:48 lfs kernel: [    0.616315] uhci_hcd 0000:00:05.0: UHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.617426] uhci_hcd 0000:00:05.0: new USB bus registered, assigned bus number 1
+Dec  7 17:34:48 lfs kernel: [    0.617642] uhci_hcd 0000:00:05.0: irq 10, io port 0x0000c140
+Dec  7 17:34:48 lfs kernel: [    0.617830] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.07
+Dec  7 17:34:48 lfs kernel: [    0.617950] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Dec  7 17:34:48 lfs kernel: [    0.618067] usb usb1: Product: UHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.618182] usb usb1: Manufacturer: Linux 6.7.0-rc2-thor_kernel-chamada-gc2d5304e6c64-dirty uhci_hcd
+Dec  7 17:34:48 lfs kernel: [    0.618301] usb usb1: SerialNumber: 0000:00:05.0
+Dec  7 17:34:48 lfs kernel: [    0.618555] hub 1-0:1.0: USB hub found
+Dec  7 17:34:48 lfs kernel: [    0.618699] hub 1-0:1.0: 2 ports detected
+Dec  7 17:34:48 lfs kernel: [    0.618987] ehci-pci 0000:00:05.7: EHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.619165] ehci-pci 0000:00:05.7: new USB bus registered, assigned bus number 2
+Dec  7 17:34:48 lfs kernel: [    0.619369] ehci-pci 0000:00:05.7: irq 10, io mem 0xc80a8000
+Dec  7 17:34:48 lfs kernel: [    0.625723] ehci-pci 0000:00:05.7: USB 2.0 started, EHCI 1.00
+Dec  7 17:34:48 lfs kernel: [    0.625987] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.07
+Dec  7 17:34:48 lfs kernel: [    0.626115] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Dec  7 17:34:48 lfs kernel: [    0.626235] usb usb2: Product: EHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.626356] usb usb2: Manufacturer: Linux 6.7.0-rc2-thor_kernel-chamada-gc2d5304e6c64-dirty ehci_hcd
+Dec  7 17:34:48 lfs kernel: [    0.626482] usb usb2: SerialNumber: 0000:00:05.7
+Dec  7 17:34:48 lfs kernel: [    0.626820] hub 2-0:1.0: USB hub found
+Dec  7 17:34:48 lfs kernel: [    0.626962] hub 2-0:1.0: 6 ports detected
+Dec  7 17:34:48 lfs kernel: [    0.648822] hub 1-0:1.0: USB hub found
+Dec  7 17:34:48 lfs kernel: [    0.649728] hub 1-0:1.0: 2 ports detected
+Dec  7 17:34:48 lfs kernel: [    0.650006] uhci_hcd 0000:00:05.1: UHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.650419] uhci_hcd 0000:00:05.1: new USB bus registered, assigned bus number 3
+Dec  7 17:34:48 lfs kernel: [    0.650610] uhci_hcd 0000:00:05.1: irq 11, io port 0x0000c120
+Dec  7 17:34:48 lfs kernel: [    0.650840] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.07
+Dec  7 17:34:48 lfs kernel: [    0.650961] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Dec  7 17:34:48 lfs kernel: [    0.651081] usb usb3: Product: UHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.651196] usb usb3: Manufacturer: Linux 6.7.0-rc2-thor_kernel-chamada-gc2d5304e6c64-dirty uhci_hcd
+Dec  7 17:34:48 lfs kernel: [    0.651313] usb usb3: SerialNumber: 0000:00:05.1
+Dec  7 17:34:48 lfs kernel: [    0.651627] hub 3-0:1.0: USB hub found
+Dec  7 17:34:48 lfs kernel: [    0.651808] hub 3-0:1.0: 2 ports detected
+Dec  7 17:34:48 lfs kernel: [    0.659275] uhci_hcd 0000:00:05.2: UHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.659560] uhci_hcd 0000:00:05.2: new USB bus registered, assigned bus number 4
+Dec  7 17:34:48 lfs kernel: [    0.659776] uhci_hcd 0000:00:05.2: irq 11, io port 0x0000c100
+Dec  7 17:34:48 lfs kernel: [    0.659933] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 6.07
+Dec  7 17:34:48 lfs kernel: [    0.660053] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Dec  7 17:34:48 lfs kernel: [    0.660171] usb usb4: Product: UHCI Host Controller
+Dec  7 17:34:48 lfs kernel: [    0.660288] usb usb4: Manufacturer: Linux 6.7.0-rc2-thor_kernel-chamada-gc2d5304e6c64-dirty uhci_hcd
+Dec  7 17:34:48 lfs kernel: [    0.660408] usb usb4: SerialNumber: 0000:00:05.2
+Dec  7 17:34:48 lfs kernel: [    0.660678] hub 4-0:1.0: USB hub found
+Dec  7 17:34:48 lfs kernel: [    0.660797] hub 4-0:1.0: 2 ports detected
+Dec  7 17:34:48 lfs kernel: [    0.661079] usbcore: registered new interface driver usblp
+Dec  7 17:34:48 lfs kernel: [    0.661217] usbcore: registered new interface driver usb-storage
+Dec  7 17:34:48 lfs kernel: [    0.661396] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+Dec  7 17:34:48 lfs kernel: [    0.661951] serio: i8042 KBD port at 0x60,0x64 irq 1
+Dec  7 17:34:48 lfs kernel: [    0.662075] serio: i8042 AUX port at 0x60,0x64 irq 12
+Dec  7 17:34:48 lfs kernel: [    0.662360] mousedev: PS/2 mouse device common for all mice
+Dec  7 17:34:48 lfs kernel: [    0.662627] rtc_cmos 00:04: RTC can wake from S4
+Dec  7 17:34:48 lfs kernel: [    0.663117] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1
+Dec  7 17:34:48 lfs kernel: [    0.663425] rtc_cmos 00:04: registered as rtc0
+Dec  7 17:34:48 lfs kernel: [    0.663574] rtc_cmos 00:04: alarms up to one day, y3k, 242 bytes nvram
+Dec  7 17:34:48 lfs kernel: [    0.664602] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+Dec  7 17:34:48 lfs kernel: [    0.664776] intel_pstate: CPU model not supported
+Dec  7 17:34:48 lfs kernel: [    0.664904] pstore: Using crash dump compression: deflate
+Dec  7 17:34:48 lfs kernel: [    0.665024] pstore: Registered efi_pstore as persistent store backend
+Dec  7 17:34:48 lfs kernel: [    0.665151] hid: raw HID events driver (C) Jiri Kosina
+Dec  7 17:34:48 lfs kernel: [    0.665340] usbcore: registered new interface driver usbhid
+Dec  7 17:34:48 lfs kernel: [    0.665460] usbhid: USB HID core driver
+Dec  7 17:34:48 lfs kernel: [    0.675550] ipip: IPv4 and MPLS over IPv4 tunneling driver
+Dec  7 17:34:48 lfs kernel: [    0.676537] Initializing XFRM netlink socket
+Dec  7 17:34:48 lfs kernel: [    0.676678] NET: Registered PF_INET6 protocol family
+Dec  7 17:34:48 lfs kernel: [    0.677212] Segment Routing with IPv6
+Dec  7 17:34:48 lfs kernel: [    0.677335] In-situ OAM (IOAM) with IPv6
+Dec  7 17:34:48 lfs kernel: [    0.677468] mip6: Mobile IPv6
+Dec  7 17:34:48 lfs kernel: [    0.677697] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Dec  7 17:34:48 lfs kernel: [    0.677928] NET: Registered PF_PACKET protocol family
+Dec  7 17:34:48 lfs kernel: [    0.678065] Key type dns_resolver registered
+Dec  7 17:34:48 lfs kernel: [    0.678501] IPI shorthand broadcast: enabled
+Dec  7 17:34:48 lfs kernel: [    0.680767] snd_hda_intel 0000:00:04.0: Cannot probe codecs, giving up
+Dec  7 17:34:48 lfs kernel: [    0.683226] sched_clock: Marking stable (682001558, 643965)->(762391096, -79745573)
+Dec  7 17:34:48 lfs kernel: [    0.683702] registered taskstats version 1
+Dec  7 17:34:48 lfs kernel: [    0.683820] Loading compiled-in X.509 certificates
+Dec  7 17:34:48 lfs kernel: [    0.684698] PM:   Magic number: 3:396:592
+Dec  7 17:34:48 lfs kernel: [    0.684845] printk: legacy console [netcon0] enabled
+Dec  7 17:34:48 lfs kernel: [    0.684962] netconsole: network logging started
+Dec  7 17:34:48 lfs kernel: [    0.685121] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Dec  7 17:34:48 lfs kernel: [    0.685482] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Dec  7 17:34:48 lfs kernel: [    0.685617] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Dec  7 17:34:48 lfs kernel: [    0.685803] cfg80211: failed to load regulatory.db
+Dec  7 17:34:48 lfs kernel: [    0.685946] ALSA device list:
+Dec  7 17:34:48 lfs kernel: [    0.686064]   No soundcards found.
+Dec  7 17:34:48 lfs kernel: [    0.863925] usb 2-1: new high-speed USB device number 2 using ehci-pci
+Dec  7 17:34:48 lfs kernel: [    0.998777] usb 2-1: New USB device found, idVendor=0627, idProduct=0001, bcdDevice= 0.00
+Dec  7 17:34:48 lfs kernel: [    0.999659] usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=10
+Dec  7 17:34:48 lfs kernel: [    0.999797] usb 2-1: Product: QEMU USB Tablet
+Dec  7 17:34:48 lfs kernel: [    1.000464] usb 2-1: Manufacturer: QEMU
+Dec  7 17:34:48 lfs kernel: [    1.000805] usb 2-1: SerialNumber: 28754-0000:00:05.7-1
+Dec  7 17:34:48 lfs kernel: [    1.005238] input: QEMU QEMU USB Tablet as /devices/pci0000:00/0000:00:05.7/usb2/2-1/2-1:1.0/0003:0627:0001.0001/input/input4
+Dec  7 17:34:48 lfs kernel: [    1.005534] hid-generic 0003:0627:0001.0001: input,hidraw0: USB HID v0.01 Mouse [QEMU QEMU USB Tablet] on usb-0000:00:05.7-1/input0
+Dec  7 17:34:48 lfs kernel: [    1.286339] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+Dec  7 17:34:48 lfs kernel: [    1.287631] md: Waiting for all devices to be available before autodetect
+Dec  7 17:34:48 lfs kernel: [    1.287823] md: If you don't use raid, use raid=noautodetect
+Dec  7 17:34:48 lfs kernel: [    1.287955] md: Autodetecting RAID arrays.
+Dec  7 17:34:48 lfs kernel: [    1.288083] md: autorun ...
+Dec  7 17:34:48 lfs kernel: [    1.288207] md: ... autorun DONE.
+Dec  7 17:34:48 lfs kernel: [    1.292976] EXT4-fs (sda3): mounted filesystem 41a8ec51-1411-4d87-9f9e-f3c63c7c0452 ro with ordered data mode. Quota mode: none.
+Dec  7 17:34:48 lfs kernel: [    1.293124] VFS: Mounted root (ext4 filesystem) readonly on device 8:3.
+Dec  7 17:34:48 lfs kernel: [    1.293885] devtmpfs: mounted
+Dec  7 17:34:48 lfs kernel: [    1.294935] Freeing unused kernel image (initmem) memory: 2684K
+Dec  7 17:34:48 lfs kernel: [    1.301698] Write protecting the kernel read-only data: 22528k
+Dec  7 17:34:48 lfs kernel: [    1.303798] Freeing unused kernel image (rodata/data gap) memory: 1180K
+Dec  7 17:34:48 lfs kernel: [    1.303944] Run /sbin/init as init process
+Dec  7 17:34:48 lfs kernel: [    1.304082]   with arguments:
+Dec  7 17:34:48 lfs kernel: [    1.304083]     /sbin/init
+Dec  7 17:34:48 lfs kernel: [    1.304083]   with environment:
+Dec  7 17:34:48 lfs kernel: [    1.304084]     HOME=/
+Dec  7 17:34:48 lfs kernel: [    1.304084]     TERM=linux
+Dec  7 17:34:48 lfs kernel: [    1.304084]     BOOT_IMAGE=/vmlinuz-torvalds-c2d5304e6c648ebcf653bace7e51e0e6742e46c8-thor-chamada
+Dec  7 17:34:48 lfs kernel: [    1.341362] stty (948) used greatest stack depth: 13328 bytes left
+Dec  7 17:34:48 lfs kernel: [    1.347716] dmesg (950) used greatest stack depth: 13232 bytes left
+Dec  7 17:34:48 lfs kernel: [    1.400230] ip (1017) used greatest stack depth: 12944 bytes left
+Dec  7 17:34:48 lfs kernel: <30>[    1.419625] udevd[1042]: starting version 3.2.11
+Dec  7 17:34:48 lfs kernel: <30>[    1.430058] udevd[1043]: starting eudev-3.2.11
+Dec  7 17:34:48 lfs kernel: [    1.444706] e1000 0000:00:03.0 ens3: renamed from eth0
+Dec  7 17:34:48 lfs kernel: [    1.473612] Console: switching to colour dummy device 80x25
+Dec  7 17:34:48 lfs kernel: [    1.473863] qxl 0000:00:02.0: vgaarb: deactivate vga console
+Dec  7 17:34:48 lfs kernel: [    1.473879] [drm] Device Version 0.0
+Dec  7 17:34:48 lfs kernel: [    1.473880] [drm] Compression level 0 log level 0
+Dec  7 17:34:48 lfs kernel: [    1.473882] [drm] 12286 io pages at offset 0x1000000
+Dec  7 17:34:48 lfs kernel: [    1.473885] [drm] 16777216 byte draw area at offset 0x0
+Dec  7 17:34:48 lfs kernel: [    1.473886] [drm] RAM header offset: 0x3ffe000
+Dec  7 17:34:48 lfs kernel: [    1.473939] [drm] qxl: 16M of VRAM memory size
+Dec  7 17:34:48 lfs kernel: [    1.473941] [drm] qxl: 63M of IO pages memory ready (VRAM domain)
+Dec  7 17:34:48 lfs kernel: [    1.473942] [drm] qxl: 64M of Surface memory size
+Dec  7 17:34:48 lfs kernel: [    1.477503] [drm] slot 0 (main): base 0xc4000000, size 0x03ffe000
+Dec  7 17:34:48 lfs kernel: [    1.478240] [drm] slot 1 (surfaces): base 0xc0000000, size 0x04000000
+Dec  7 17:34:48 lfs kernel: [    1.478443] [drm] Initialized qxl 0.1.0 20120117 for 0000:00:02.0 on minor 0
+Dec  7 17:34:48 lfs kernel: [    1.479150] fbcon: qxldrmfb (fb0) is primary device
+Dec  7 17:34:48 lfs kernel: [    1.484125] Console: switching to colour frame buffer device 128x48
+Dec  7 17:34:48 lfs kernel: [    1.488402] qxl 0000:00:02.0: [drm] fb0: qxldrmfb frame buffer device
+Dec  7 17:34:48 lfs kernel: [    2.186987] Adding 1048572k swap on /dev/sda2.  Priority:1 extents:1 across:1048572k
+Dec  7 17:34:48 lfs kernel: [    2.198784] EXT4-fs (sda3): re-mounted 41a8ec51-1411-4d87-9f9e-f3c63c7c0452 ro. Quota mode: none.
+Dec  7 17:34:48 lfs kernel: [    2.231955] EXT4-fs (sda3): re-mounted 41a8ec51-1411-4d87-9f9e-f3c63c7c0452 r/w. Quota mode: none.
+Dec  7 17:34:48 lfs kernel: [    2.240251] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+Dec  7 17:34:48 lfs kernel: [    2.250485] find (2186) used greatest stack depth: 12928 bytes left
+Dec  7 17:34:48 lfs kernel: [    3.175145] udevd (1058) used greatest stack depth: 11952 bytes left
+Dec  7 17:34:49 lfs kernel: [    4.283681] e1000: ens3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Dec  7 17:34:52 lfs kernel: [    7.749351] input: spice vdagent tablet as /devices/virtual/input/input5
+Dec  7 17:34:52 lfs kernel: [    7.816028] input: spice vdagent tablet as /devices/virtual/input/input6

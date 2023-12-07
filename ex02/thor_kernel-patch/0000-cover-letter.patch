@@ -1,0 +1,19 @@
+From 9d485414f656525b0d2f1bba0d4ad06b5cc8f119 Mon Sep 17 00:00:00 2001
+From: Clement Hamada <clementhamada@protonmai.com>
+Date: Thu, 7 Dec 2023 17:43:30 +0100
+Subject: [PATCH 0/1] Add suffix -thor_kernel to Makefile EXTRAVERSION
+
+According to Assignment 02 of little_penguin, the EXTRAVERSION field
+must contain "-thor_kernel".
+
+Clement Hamada (1):
+  version: Append -thor_kernel to EXTRAVERSION
+
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+base-commit: c2d5304e6c648ebcf653bace7e51e0e6742e46c8
+-- 
+2.34.1
+

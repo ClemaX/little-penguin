@@ -1,0 +1,90 @@
+# vim: filetype=bash
+# shellcheck shell=bash
+# shellcheck disable=SC2034
+
+name="linux"
+owner="torvalds"
+ref="c2d5304e6c648ebcf653bace7e51e0e6742e46c8"
+
+version="$owner-$ref-thor"
+
+source_base="$name-$ref"
+
+sources=(
+	"git://git.kernel.org/pub/scm/linux/kernel/git/$owner/linux.git:$ref"
+	"kernel.config"
+	"thor_kernel.patch"
+)
+md5sums=()
+
+kernel_localversion="${LFS_LOCALVERSION:--chamada}"
+kernel_hostname="${LFS_HOSTNAME:-lfs}"
+
+kernel_image_name="vmlinuz-$version$kernel_localversion"
+
+prepare()
+{
+	pushd "$SRCDIR" || return
+		pushd "$source_base" || return
+			# Prepare for compilation.
+			make mrproper
+
+			# Apply thor_kernel patch.
+			patch -Np1 -i "$SRCDIR/thor_kernel.patch"
+		popd || return
+
+		# Set configuration.
+		sed kernel.config > "$source_base/.config" \
+			-e 's/^\s*CONFIG_LOCALVERSION="[^"]*"\s*$/CONFIG_LOCALVERSION="'"$kernel_localversion"'"/' \
+			-e 's/^\s*CONFIG_DEFAULT_HOSTNAME="[^"]*"\s*$/CONFIG_DEFAULT_HOSTNAME="'"$kernel_hostname"'"/'
+	popd || return
+}
+
+build()
+{
+	local lfs_version="${LFS_VERSION:-11.3}"
+
+	pushd "$SRCDIR/$source_base" || return
+		make
+
+		# Install kernel modules.
+		make INSTALL_MOD_PATH="$DESTDIR" modules_install
+
+		# Install kernel.
+		install -vD arch/x86/boot/bzImage "$DESTDIR/boot/$kernel_image_name"
+
+		# Install kernel symbol file.
+		install -vD System.map "$DESTDIR/boot/System.map-$version"
+
+		# Install kernel config file.
+		install -vD .config "$DESTDIR/boot/config-$version"
+
+		# Install documentation.
+		install -vd "$DESTDIR/usr/share/doc/$source_base"
+		cp -vr Documentation/* "$DESTDIR/usr/share/doc/$source_base"
+
+		# Cleanup.
+		make distclean
+	popd || return
+
+	pushd "$SRCDIR" || return
+		# Install kernel sources.
+		install -vd "$DESTDIR/usr/src"
+
+		mv -v "$source_base" "$DESTDIR/usr/src/kernel-$version"
+	popd || return
+}
+
+post_install()
+{
+	# Configure USB module load order.
+	install -v -m755 -d /etc/modprobe.d
+	cat > /etc/modprobe.d/usb.conf << "EOF"
+# Begin /etc/modprobe.d/usb.conf
+
+install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
+
+# End /etc/modprobe.d/usb.conf
+EOF
+}
