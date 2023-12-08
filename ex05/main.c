@@ -85,10 +85,6 @@ done:
  * Allows writing only "chamada".
  * Returns EINVAL otherwise.
  */
-/*
- * Allows writing only "chamada".
- * Returns EINVAL otherwise.
- */
 static ssize_t dev_write(struct file *file, const char *data, size_t size,
 			 loff_t *offset)
 {
