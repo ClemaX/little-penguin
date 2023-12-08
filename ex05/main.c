@@ -3,6 +3,10 @@
 #include <linux/module.h>
 #include <linux/printk.h>
 
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Clément Hamada");
+MODULE_DESCRIPTION("Fortytwo Character Device");
+
 #define FT_DEV_CLASS "ft"
 #define FT_DEV_NAME "fortytwo"
 #define FT_DEV_CONTENT "chamada"
@@ -174,5 +178,3 @@ static void __exit fortytwo_exit(void)
 
 module_init(fortytwo_init);
 module_exit(fortytwo_exit);
-
-MODULE_LICENSE("GPL");
