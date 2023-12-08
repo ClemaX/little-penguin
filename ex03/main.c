@@ -6,7 +6,7 @@
 /*
  * Mock task that takes some time to complete.
  */
-int __exit do_work(int *my_int)
+static int __init do_work(int *my_int)
 {
 	int x;
 	int y = *my_int;
@@ -23,7 +23,7 @@ int __exit do_work(int *my_int)
 	return z;
 }
 
-int __init my_init(void)
+static int __init my_init(void)
 {
 	int x = 10;
 
@@ -32,7 +32,7 @@ int __init my_init(void)
 	return x;
 }
 
-void my_exit(void) {}
+static void __exit my_exit(void) {}
 
 module_init(my_init);
 module_exit(my_exit);

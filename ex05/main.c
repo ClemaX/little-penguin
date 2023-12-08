@@ -166,7 +166,7 @@ static int __init fortytwo_init(void)
 	return error;
 }
 
-void __exit fortytwo_exit(void)
+static void __exit fortytwo_exit(void)
 {
 	pr_info("Tearing down '" FT_DEV_NAME "'...\n");
 	misc_deregister(&fortytwo_device);
