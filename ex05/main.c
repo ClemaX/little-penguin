@@ -9,7 +9,7 @@ MODULE_DESCRIPTION("Fortytwo Character Device");
 
 #define FT_DEV_CLASS "ft"
 #define FT_DEV_NAME "fortytwo"
-#define FT_DEV_CONTENT "chamada"
+#define FT_DEV_CONTENT "chamada\n"
 #define FT_DEV_CONTENT_LEN (sizeof(FT_DEV_CONTENT) - 1)
 #define FT_DEV_MINOR (MISC_DYNAMIC_MINOR)
 
