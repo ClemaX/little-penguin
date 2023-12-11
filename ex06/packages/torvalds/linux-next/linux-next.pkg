@@ -1,0 +1,92 @@
+# vim: filetype=bash
+# shellcheck shell=bash
+# shellcheck disable=SC2034
+
+name="linux-next"
+version="20231211"
+ref="next-$version"
+
+source_base="$name-$ref"
+
+sources=(
+	"git://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git:$ref"
+	"kernel.config"
+)
+md5sums=()
+
+kernel_localversion="${LFS_LOCALVERSION:--chamada}"
+kernel_hostname="${LFS_HOSTNAME:-lfs}"
+
+kernel_image_name="vmlinuz-$version$kernel_localversion"
+
+prepare()
+{
+	pushd "$SRCDIR/$source_base" || return
+		# Prepare for compilation.
+		make mrproper
+
+		# Set configuration.
+		sed "$SRCDIR/kernel.config" > ".config" \
+			-e 's/^\s*CONFIG_LOCALVERSION="[^"]*"\s*$/CONFIG_LOCALVERSION="'"$kernel_localversion"'"/' \
+			-e 's/^\s*CONFIG_DEFAULT_HOSTNAME="[^"]*"\s*$/CONFIG_DEFAULT_HOSTNAME="'"$kernel_hostname"'"/'
+
+		# Upgrade configuration using defaults.
+		make olddefconfig
+	popd || return
+}
+
+build()
+{
+	local lfs_version="${LFS_VERSION:-11.3}"
+	local kernel_release_version
+
+	pushd "$SRCDIR/$source_base" || return
+		make
+
+		# Install kernel modules.
+		make INSTALL_MOD_PATH="$DESTDIR" modules_install
+
+		# Install kernel.
+		install -vD arch/x86/boot/bzImage "$DESTDIR/boot/$kernel_image_name"
+
+		# Install kernel symbol file.
+		install -vD System.map "$DESTDIR/boot/System.map-$version"
+
+		# Install kernel config file.
+		install -vD .config "$DESTDIR/boot/config-$version"
+
+		# Install documentation.
+		install -vd "$DESTDIR/usr/share/doc/$source_base"
+		cp -vr Documentation/* "$DESTDIR/usr/share/doc/$source_base"
+
+		# Get kernel release version.
+		kernel_release_version=$(make -s kernelrelease)
+
+		# Cleanup for external module building.
+		make clean
+	popd || return
+
+	pushd "$SRCDIR" || return
+		# Install kernel sources.
+		install -vd "$DESTDIR/usr/src"
+
+		mv -v "$source_base" "$DESTDIR/usr/src/kernel-$version"
+
+		# Fix kernel module build directory symlink.
+		ln -sf "/usr/src/kernel-$version" "$DESTDIR/lib/modules/$kernel_release_version/build"
+	popd || return
+}
+
+post_install()
+{
+	# Configure USB module load order.
+	install -v -m755 -d /etc/modprobe.d
+	cat > /etc/modprobe.d/usb.conf << "EOF"
+# Begin /etc/modprobe.d/usb.conf
+
+install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
+
+# End /etc/modprobe.d/usb.conf
+EOF
+}
