@@ -3,6 +3,8 @@
 #include <linux/module.h>
 #include <linux/slab.h>
 
+MODULE_LICENSE("GPL");
+
 /*
  * Mock task that takes some time to complete.
  */
