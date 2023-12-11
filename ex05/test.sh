@@ -5,7 +5,7 @@ make
 insmod main.ko
 echo
 
-echo 'cat -e /dev/fortytwo:'
+echo 'cat -e /dev/fortytwo'
 cat -e /dev/fortytwo
 echo
 echo
