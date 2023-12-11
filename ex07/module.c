@@ -63,7 +63,7 @@ done:
 	return error;
 }
 
-void __exit fortytwo_exit(void)
+static void __exit fortytwo_exit(void)
 {
 	pr_info("Tearing down '" FT_DEBUGFS_DIR "'...\n");
 
