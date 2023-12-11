@@ -3,7 +3,6 @@
 #include <linux/module.h>
 #include <linux/printk.h>
 
-#include "linux/debugfs.h"
 #include "module.h"
 
 MODULE_LICENSE("GPL");

@@ -6,7 +6,7 @@
 
 #define FT_ID_NAME "id"
 #define FT_ID_MODE 0666
-#define FT_ID_CONTENT "chamada"
+#define FT_ID_CONTENT "chamada\n"
 #define FT_ID_CONTENT_LEN (sizeof(FT_ID_CONTENT) - 1)
 
 #define FT_JIFFIES_NAME "jiffies"

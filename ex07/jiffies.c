@@ -37,7 +37,7 @@ static int jiffies_release(struct inode *inode, struct file *file)
 static ssize_t jiffies_read(struct file *file, char *data, size_t size,
 			    loff_t *offset)
 {
-	char buffer[21];
+	char buffer[22];
 	int error;
 	size_t copy_length;
 
@@ -52,7 +52,7 @@ static ssize_t jiffies_read(struct file *file, char *data, size_t size,
 	if (copy_length == 0)
 		goto done;
 
-	copy_length = snprintf(buffer, sizeof(buffer), "%lu", jiffies);
+	copy_length = snprintf(buffer, sizeof(buffer), "%lu\n", jiffies);
 
 	copy_length = min(copy_length, size);
 
