@@ -29,5 +29,4 @@ echo "Kernel log output:"
 
 dmesg --since '30 seconds ago'
 
-
 make clean
