@@ -1,4 +1,4 @@
-#include <linux/kernel.h>
+#include <linux/version.h>
 #include <linux/module.h>
 #include <linux/printk.h>
 #include <linux/proc_fs.h>

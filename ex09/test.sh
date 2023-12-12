@@ -3,10 +3,11 @@
 make
 
 insmod main.ko
-sleep 1
+
+echo 'cat -e /proc/mounpoints'
+cat -e /proc/mountpoints
 
 rmmod main.ko
-sleep 0.5
 
 make clean
 
